@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --GRID-SQUARE-DIMENSIONS: 100px;
+  --GRID-WIDTH: 800px;
+  --GRID-HEIGHT: 800px;
+  --GRID-COLOR: blue;
+}
+
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+  color: white;
+  -webkit-text-stroke: 0.5px black;
+}
+
+.head {
+  text-align: center;
+  width: 80%;
+  height: 15%;
+  margin: auto;
+  padding: 2rem;
+}
+
+.grid-container {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.options-header {
+  height: 10%;
+  width: 30%;
+  text-align: center;
+}
+
+.grid-options {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  flex: 0 1 30%;
+}
+
+.size-dropdown {
+  height: 3%;
+  width: 25%;
+  margin-top: 2rem;
+}
+
+.change-size-button {
+  margin: 1rem;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+
+.color-selector {
+  width: 30%;
+  height: 15%;
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5rem;
+}
+
+.color-option {
+  flex: 1 1 calc(100% / 6);
+  height: 50%;
+  background-color: white;
+  border: 1px solid black;
+  
+  cursor: pointer;
+}
+
+.color-option.black {
+  background-color: black;
+}
+.color-option.white {
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  -webkit-text-stroke: 0px;
+}
+
+.color-option {
+  transition: all 0.3s ease-in-out
+}
+
+.color-option.red {
+  background-color: red;
+}
+.color-option.blue {
+  background-color: blue;
+}
+.color-option.green {
+  background-color: green;
+}
+.color-option.yellow {
+  background-color: yellow;
+}
+.color-option.orange {
+  background-color: orange;
+}
+.color-option.purple {
+  background-color: purple;
+}
+.color-option.pink {
+    background-color: pink;
+}
+.color-option.brown {
+  background-color: brown;
+}
+.color-option.gray {
+  background-color: gray;
+}
+.color-option.cyan {
+  background-color: cyan;
+}
+.color-option.lime{
+  background-color: #00ff00;
+}
+
+.color-option.selected{
+  border: 2px solid rgb(255, 0, 170);
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out
+}
+
+.grid {
+  width: var(--GRID-WIDTH);
+  background-color: var(--GRID-COLOR);
+  height: var(--GRID-HEIGHT);
+  display: flex;
+  flex-flow: row wrap;
+  cursor: pointer;
+}
+
+.grid-square {
+  flex: 1 1 var(--GRID-SQUARE-DIMENSIONS);
+  max-width: var(--GRID-SQUARE-DIMENSIONS);
+  min-height: var(--GRID-SQUARE-DIMENSIONS);
+  border: 1px solid rgba(0, 0, 0, 0.486);
+  background-color: white;
+}
+
+.grid-square.enter {
+  background-color: var(--GRID-COLOR);
+}

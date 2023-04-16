@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch a Sketch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="head">
+        <h1>Welcome to Etch a Sketch</h1>
+    </header>
+    <section class="grid-container">
+        <section class="grid-options">
+            <h2 class="options-header">Options</h2>
+            <p>Choose Grid Pixel Size</p>
+            <select class="size-dropdown">
+                <option id="64" class="size-choice">Small: 64 x 64</option>
+                <option id="32" class="size-choice">Medium: 32 x 32</option>
+                <option id="16" class="size-choice">Large: 16 x 16</option>
+                
+            </select>
+            <button class="change-size-button">Re-make Grid</button>
+            <p>Choose Color</p>
+            <section class="color-selector">
+                <div class="color-option black" id="black"></div>
+                <div class="color-option lime" id="#00ff00"></div>
+                <div class="color-option red" id="red"></div>
+                <div class="color-option green" id="green"></div>
+                <div class="color-option blue" id="blue"></div>
+                <div class="color-option yellow" id="yellow"></div>
+                <div class="color-option orange" id="orange"></div>
+                <div class="color-option purple" id="purple"></div>
+                <div class="color-option pink" id="pink"></div>
+                <div class="color-option brown" id="brown"></div>
+                <div class="color-option gray" id="gray"></div>
+                <div class="color-option cyan" id="cyan"></div>
+                <div class="color-option white" id="white">Eraser</div>
+            </section>
+        </section>
+        <section class="grid" draggable="false"></section>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
